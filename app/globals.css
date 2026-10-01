@@ -1,0 +1,486 @@
+/* ==========================================================================
+   AWS Sign-In Exact Replica Stylesheet
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #16191f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page Layout Wrapper */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Background Isometric 3D Cubes (Subtle AWS graphics on sides)
+   -------------------------------------------------------------------------- */
+.background-cubes-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cubes-svg {
+  position: absolute;
+  height: 85vh;
+  opacity: 0.65;
+}
+
+.left-cubes {
+  left: -20px;
+  top: 80px;
+  width: 320px;
+}
+
+.right-cubes {
+  right: -20px;
+  top: 100px;
+  width: 340px;
+}
+
+/* --------------------------------------------------------------------------
+   Page Header
+   -------------------------------------------------------------------------- */
+.page-header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-top: 14px;
+}
+
+.top-right-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 26px;
+  padding-right: 44px;
+  font-size: 12px;
+}
+
+.header-link {
+  color: #0073bb;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+}
+
+.header-link:hover {
+  color: #005a92;
+  text-decoration: underline;
+}
+
+.dropdown-caret {
+  font-size: 8px;
+  color: #0073bb;
+  vertical-align: middle;
+  transform: scaleY(0.85);
+}
+
+.dropdown-link-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 22px;
+}
+
+.logo-link {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.aws-header-logo {
+  width: 84px;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Main Content Layout
+   -------------------------------------------------------------------------- */
+.main-content {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px 30px 20px;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 856px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+}
+
+.grid-left-col {
+  width: 350px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.grid-right-col {
+  width: 480px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+/* --------------------------------------------------------------------------
+   Left Column: Sign-in Card
+   -------------------------------------------------------------------------- */
+.signin-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d5dbdb;
+  border-radius: 8px;
+  padding: 22px 24px 22px 24px;
+  box-shadow: 0 1px 1px 0 rgba(0, 28, 36, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.signin-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.signin-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #16191f;
+  line-height: 1.2;
+}
+
+.info-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.form-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #16191f;
+  display: block;
+}
+
+.dotted-link {
+  color: #0073bb;
+  text-decoration: none;
+  border-bottom: 1px dotted #0073bb;
+  font-weight: 400;
+  font-size: 12.5px;
+  transition: color 0.15s;
+}
+
+.dotted-link:hover {
+  color: #005a92;
+  border-bottom-style: solid;
+}
+
+.form-input {
+  width: 100%;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid #aab7b8;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 13.5px;
+  color: #16191f;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-input:focus {
+  border-color: #0073bb;
+  box-shadow: 0 0 0 2px rgba(0, 115, 187, 0.2);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid #aab7b8;
+  accent-color: #0073bb;
+}
+
+.checkbox-text {
+  font-size: 12.5px;
+  color: #16191f;
+  font-weight: 400;
+}
+
+.password-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.trouble-link {
+  font-size: 12.5px;
+}
+
+/* Buttons */
+.btn-primary-signin {
+  width: 100%;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #ec7211;
+  background-image: linear-gradient(180deg, #ec7211 0%, #eb5f07 100%);
+  border: 1px solid #eb5f07;
+  color: #16191f;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 1px 0 rgba(0, 28, 36, 0.1);
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.btn-primary-signin:hover {
+  background-color: #dd6b10;
+  background-image: linear-gradient(180deg, #dd6b10 0%, #d85705 100%);
+  border-color: #d85705;
+}
+
+.btn-primary-signin:active {
+  background-color: #c45b0a;
+}
+
+.btn-secondary-root {
+  width: 100%;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1.5px solid #0073bb;
+  color: #0073bb;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  transition: background-color 0.15s;
+}
+
+.btn-secondary-root:hover {
+  background-color: #f2f8fd;
+}
+
+.create-account-wrapper {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.create-account-link {
+  color: #0073bb;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.create-account-link:hover {
+  color: #005a92;
+  text-decoration: underline;
+}
+
+/* Disclaimer text */
+.disclaimer-wrapper {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.disclaimer-text {
+  font-size: 11px;
+  color: #545b64;
+  line-height: 1.45;
+  width: 350px;
+  padding: 0 2px;
+}
+
+.disclaimer-link {
+  color: #0073bb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.disclaimer-link:hover {
+  color: #005a92;
+}
+
+/* --------------------------------------------------------------------------
+   Right Column: Amazon Lightsail Card
+   -------------------------------------------------------------------------- */
+.lightsail-banner-card {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightsail-banner-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.lightsail-promo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+/* --------------------------------------------------------------------------
+   Page Footer
+   -------------------------------------------------------------------------- */
+.page-footer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 24px 20px 24px 20px;
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 11px;
+  color: #687074;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Design
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .top-right-nav {
+    padding-right: 20px;
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .content-container {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .signin-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .grid-left-col,
+  .grid-right-col {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .disclaimer-text {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .cubes-svg {
+    display: none;
+  }
+}
