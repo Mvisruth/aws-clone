@@ -1,13 +1,13 @@
-# ☁️ AWS Sign-In Console Clone
+# AWS Sign-In Console Clone
 
 A pixel-perfect, fully responsive clone of the official **Amazon Web Services (AWS) Management Console Sign-In** page built with **Next.js** and **React**.
 
 ---
 
-## 📌 Features
+## Features
 
 - **Exact Replica Design**: Matches the authentic AWS IAM User Sign-in page with precision.
-- **Official Assets & Icons**:
+- **Official Assets and Icons**:
   - Centered AWS logo with the iconic curved smile arrow.
   - Official Amazon Lightsail promotional banner featuring high-speed light trails and the mascot robot.
   - Authentic 3D isometric orange cube favicon matching the AWS Management Console browser tab.
@@ -19,11 +19,11 @@ A pixel-perfect, fully responsive clone of the official **Amazon Web Services (A
   - Primary button (`Sign in`), secondary button (`Sign in using root user email`), and `Create a new AWS account` link.
 - **Dynamic Background Graphics**: Floating subtle 3D isometric cubes on the sides.
 - **Fully Responsive**: Adapts seamlessly to desktop, tablet, and mobile screens.
-- **Fast & Lightweight**: Built with Next.js App Router for optimal performance.
+- **Fast and Lightweight**: Built with Next.js App Router for optimal performance.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
 - **Library**: [React](https://react.dev/)
@@ -32,7 +32,7 @@ A pixel-perfect, fully responsive clone of the official **Amazon Web Services (A
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
@@ -48,7 +48,7 @@ npm -v
 
 ---
 
-## 🚀 Step-by-Step Installation & Setup
+## Step-by-Step Installation and Setup
 
 ### Method 1: Clone via Git (Recommended)
 
@@ -98,7 +98,7 @@ npm -v
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 aws-clone/
@@ -109,7 +109,7 @@ aws-clone/
 ├── components/
 │   ├── AwsLogo.jsx         # Scalable vector AWS logo
 │   ├── BackgroundCubes.jsx # Floating 3D isometric cubes graphic
-│   ├── Header.jsx          # Top utility navigation & centered AWS logo
+│   ├── Header.jsx          # Top utility navigation and centered AWS logo
 │   ├── LightsailCard.jsx   # Amazon Lightsail banner card
 │   ├── LightsailRobot.jsx  # Line-art Lightsail mascot robot SVG
 │   └── SignInCard.jsx      # IAM User Sign-in interactive form card
@@ -127,7 +127,7 @@ aws-clone/
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
 In the project directory, you can run:
 
@@ -139,12 +139,12 @@ In the project directory, you can run:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Mvisruth/aws-clone/issues).
 
 ---
 
-## 📄 License
+## License
 
 This project is created for educational and portfolio demonstration purposes. All AWS trademarks, logos, and brand assets belong to Amazon Web Services, Inc. or its affiliates.
